@@ -9,8 +9,6 @@ export const shazamCoreApi = createApi({
     prepareHeaders: (headers) => {
       headers.set('X-RapidAPI-Key', KEY);
       headers.set('X-RapidAPI-Host', 'shazam-core.p.rapidapi.com');
-      // eslint-disable-next-line no-console
-      console.log(KEY);
       return headers;
     },
   }),
