@@ -31,14 +31,14 @@ const SongDetails = () => {
         artistId=""
         songData={songData}
       />
-      <div className="mb-10">
+      <div className="mb-10 mt-10 md:mt-16">
         <h2 className="text-white text-3xl font-bold">Lyrics:</h2>
         <div className="mt-5">
           {songData?.sections[1].type === 'LYRICS'
-            ? songData?.sections[1].text.map((line, i) => (
-              <p className="text-gray-400 text-base my-1">{line}</p>
+            ? songData?.sections[1].text.map((line) => (
+              <p className="text-green-100 text-base my-1">{line}</p>
             ))
-            : <p className="text-gray-400 text-base my-1">Sorry, no lyrics found</p>}
+            : <p className="text-green-100 text-base my-1">Sorry, no lyrics found</p>}
         </div>
       </div>
       <RelatedSongs

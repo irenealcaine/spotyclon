@@ -11,8 +11,9 @@ const NavLinks = ({ handleClick }) => (
     {links.map((item) => (
       <NavLink
         key={item.name}
+        exact
         to={item.to}
-        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
+        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-green-200 hover:text-lime-500"
         onClick={() => handleClick && handleClick()}
       >
         <item.icon className="w-6 h-6 mx-2" />
@@ -26,9 +27,9 @@ const Sidebar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
-      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
-        <img src={melody} alt="logo" className="w-full h-24 object-contain" />
-        <p className="uppercase text-cyan-400 w-full text-center font-bold text-3xl">Spotyclon</p>
+      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#0a1200]">
+        <img src={melody} alt="logo" className="w-full h-24 object-contain animate-pulse" />
+        <p className="uppercase text-lime-600 w-full text-center font-bold text-3xl animate-pulse">Spotyclon</p>
         <NavLinks />
       </div>
 
@@ -40,9 +41,9 @@ const Sidebar = () => {
         )}
       </div>
 
-      <div className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#483d8d] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
-        <img src={melody} alt="logo" className="w-full h-24 object-contain" />
-        <p className="uppercase text-cyan-400 w-full text-center font-bold text-3xl">Spotyclon</p>
+      <div className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-lime-100/10 to-[#0a1200] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+        <img src={melody} alt="logo" className="w-full h-24 object-contain animate-pulse" />
+        <p className="uppercase text-lime-600 w-full text-center font-bold text-3xl animate-pulse">Spotyclon</p>
 
         <NavLinks handleClic={() => setMobileMenuOpen(false)} />
       </div>
