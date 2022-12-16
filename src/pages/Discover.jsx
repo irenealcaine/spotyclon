@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+// import { useEffect, useRef } from 'react';
 import { Error, Loader, SongCard } from '../components';
 import { genres } from '../assets/constants';
 import { useGetSongsByGenreQuery } from '../redux/services/shazamCore';
@@ -13,6 +14,14 @@ const Discover = () => {
 
   if (isFetching) return <Loader title="Loading songs..." />;
   if (error) return <Error />;
+
+  // const divRef = useRef(null);
+
+  // useEffect(() => {
+  //   divRef.current.scrollIntoView({ behavior: 'smooth' });
+  // });
+
+  // ref={divRef}
 
   return (
     <div className="flex flex-col">
