@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { RiCloseLine } from 'react-icons/ri';
 
 import { HiOutlineMenu } from 'react-icons/hi';
-import melody from '../assets/melody.svg';
+import melody from '../assets/melody.png';
 import { links } from '../assets/constants';
 
 const NavLinks = ({ handleClick }) => (
